@@ -1,0 +1,19 @@
+<section>
+    <app-todo-list [todos]="todos"></app-todo-list>
+    <app-todo-list [todos]="completedTodos"></app-todo-list>
+</section>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<section *ngIf="todos$ | async as todos">
+    <app-todo-list [todos]="todos"></app-todo-list>
+</section>

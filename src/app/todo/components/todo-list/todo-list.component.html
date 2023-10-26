@@ -1,0 +1,8 @@
+<section class="container">
+    <ul>
+        <app-todo-item
+            *ngFor="let todo of todos"
+            [todo]="todo">
+        </app-todo-item>
+    </ul>
+</section>
