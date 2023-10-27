@@ -17,10 +17,13 @@ export class TodoService {
         return this.httpClient.put<ToDo>(`http://localhost:3000/todo/${todo.id}`, todo);
     }
 
-    
+    //delete
+    public deleteTodoById(id: number): Observable<ToDo> {
+        return this.httpClient.delete<ToDo>(`http://localhost:3000/todo/${id}`);
+    }
 
-    // get get data
-    // post insert new data
-    // put update data
-    // delete delete data
+    //create
+    public createTodoById(todo: ToDo): Observable<ToDo> {
+        return this.httpClient.post<ToDo>(`http://localhost:3000/todo`, todo);
+    }
 }
